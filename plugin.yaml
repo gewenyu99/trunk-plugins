@@ -8,7 +8,7 @@ lint:
       files: [ALL]
       commands:
         - name: lint
-          run: bash -c "grep -o -E '^TODO' --line-number --with-filename ${target}"
+          run: bash -c "grep -o -E '^// *TODO' --line-number --with-filename ${target}"
           success_codes: [0, 1]
           read_output_from: stdout
           parser:
